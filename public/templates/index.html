@@ -1,0 +1,26 @@
+{% include 'header.html' %}
+  {% block content %}
+    <div id="content_wrapper">
+      <TABLE id="table" align="center">
+        <TR>
+          
+          <TD class="left"> 
+          </TD>
+          <TD id="cell">
+            <div id="content_head"> 
+              <p>
+                Маф-клуб "10-негритят" <IMG id="nigers" src="{{MEDIA_URL}}/images/microamericans.png">
+              </p>
+            </div>
+            <div>
+              <IMG class="content_img" src="{{MEDIA_URL}}/images/photo.png" width="605" height="429">
+            </div>
+          </TD>
+          <TD class="right">
+            <div>Партнеры</div>
+          </TD>
+        </TR>
+      </TABLE>
+    </div>
+  {% endblock %}
+{% include 'footer.html' %}
