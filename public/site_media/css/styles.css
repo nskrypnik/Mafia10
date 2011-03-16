@@ -16,7 +16,7 @@ background:url(images/header.png) repeat-x;
 }
 
 #menu{
-margin-left:55%;
+float: right;
 padding:11px;
 width:446px;
 height:45px;
@@ -24,6 +24,14 @@ background:url(images/menu.png) no-repeat;
 color:#FFFFFF;
 font-size:19px;
 }
+
+#menu a{  
+  color:#FFFFFF;  
+}
+
+#menu a:hover{
+  text-decoration: none;
+} 
 
 #foot{
 bottom:0px;
@@ -35,7 +43,6 @@ background:url(images/footer.png) repeat-x;
 }
 
 #copywrite{
-margin-left:10%;
 padding:10px;
 padding-left:20px;
 width:472px;
@@ -63,6 +70,10 @@ background-color:#EEECA9;
 border:solid #7B4C2C 2px;
 }
 
+#slide-container{
+  padding-top: 10px;
+}
+
 .left{
 border-right:#7B4C2C solid 2px;
 width:150px;
@@ -75,7 +86,7 @@ min-width:150px;
 }
 
 #content_head{
-margin-top:-40px;
+
 }
 
 .right div{
@@ -84,15 +95,18 @@ margin-top:-250px;
 font-size:23px;
 }
 
-#content_wrapper{
+#content_wrapper, #head-wrapper, #foot-wrapper{
 width: 970px;
 margin-left: auto;
 margin-right: auto;
 }
 
+#content{
+  padding: 0 20px;
+}
+
 #cell{
-width:100%;
-text-align:center;
+width:100%; 
 }
 
 #cell p{
@@ -100,7 +114,17 @@ font-size:45px;
 }
 
 #nigers{
-margin-bottom:-40px;   
+ float: right;
+ padding-right: 30px;   
+}
+
+#page_title{
+  float: left;
+}
+
+#page_title h1{
+  font-size: 40px;
+  font-weight: normal;
 }
 
 #left a{color:black; text-decoration:none;} 

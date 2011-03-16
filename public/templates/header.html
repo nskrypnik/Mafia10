@@ -6,12 +6,22 @@
   
     <link href={{MEDIA_URL}}/css/styles.css rel="stylesheet" type="text/css">
     <script type="text/javascript" src="{{MEDIA_URL}}/js/base.js"></script>
-    <script type="text/javascript" src="{{MEDIA_URL}}/js/jquery-1.2.6.js"></script>  
+    <script type="text/javascript" src="{{MEDIA_URL}}/js/jquery-1.2.6.js"></script>
+    <script type="text/javascript" >
+      $(function(){
+        setTimeout(function() { $('#screen1').hide(); $('#screen2').show();  }, 1000);
+      });
+    </script>  
   </head>
   
   <body>
+  
     <div id="head">
-    <div id="menu">
-      Главная Меню1 Меню2
-    </div>
+      <div id="head-wrapper">
+        <div id="menu">
+          <a href="/" onclick="">Главная</a>&nbsp;&nbsp;
+          <a href="javascript: void(0)" onclick="">О клубе</a>&nbsp;&nbsp;
+          <a href="javascript: void(0)" onclick="">Правила</a>
+        </div>
+      </div>
   </div>
