@@ -6,8 +6,8 @@
 						</a>
 					</div>
 				{% endcomment %}
-				<div id="blog_content">
-					<a href="{{ entry.get_absolute_url }}">
+				<div class="blog_content">
+					<a style="text-decoration: none" href="{{ entry.get_absolute_url }}">
 						<h2>{{ entry.title }}</h2>
 					</a>
 					<div align="right" class="publish_date">Опубликовано {{ entry.pub_date|date:"d.m.Y" }}</div>

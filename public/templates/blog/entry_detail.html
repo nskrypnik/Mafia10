@@ -21,26 +21,18 @@
 			
 	<div>
 
-		<table>
-			<tr valign="top">
-				<td style="padding-top: 10px;">
 				{% comment %}
 					<div id="postimage">
 						<img src="/site_media/{{entry.postimage}}" alt="{{entry.title}}" />
 					</div>
 				{% endcomment %}
-				</td>
 				
-				<td style="padding-left: 20px; width: 100%;">
 					<div align="right" class="publish_date">Опубликовано {{ entry.pub_date|date:"d.m.Y" }}</div>
 				{% comment %}
 					<div id="blog_content">
 						<b>{{ entry.excerpt_html|safe }}</b>
 					</div>
-				</td>
         {% endcomment %}	
-			</tr>
-		</table>	
 	
 	{{ entry.body_html|safe }}
 	</div>
