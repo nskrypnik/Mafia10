@@ -1,0 +1,20 @@
+  <div align="center" id="slide-container">
+    <div id="slide-show-area">
+    {% for slide in slide_list %} 
+      <IMG src="{{MEDIA_URL}}/images/{{slide}}">
+    {% endfor %}
+    </div>
+  </div>
+  
+  <script type="text/javascript">
+    $('#slide-show-area').slideshow({
+      width:605,
+      height: 300,
+      index:0,
+      time:3000,
+      play:true,
+      panel:true,
+      imglink:false,
+      playframe:false 
+    });
+  </script>

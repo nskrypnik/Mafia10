@@ -93,13 +93,16 @@ margin: 7px 0;
 }
 
 .content_img{
-padding:4px;
-background-color:#EEECA9;
-border:solid #7B4C2C 2px;
+  padding:4px;
+  background-color:#EEECA9;
+  border:solid #7B4C2C 2px;
 }
 
 #slide-container{
-  padding-top: 10px;
+  margin-top: 10px;
+  padding:4px;
+  background-color:#EEECA9;
+  border:solid #7B4C2C 2px;
 }
 
 .left{

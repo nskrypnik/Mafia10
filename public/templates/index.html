@@ -45,9 +45,9 @@
                 </div>
               {% endblock %}  
               {% block content %}
-                <div align="center" id="slide-container"> 
-                  <IMG class="content_img" src="{{MEDIA_URL}}/images/photo.png" width="605" height="429">
-                </div>
+                {% load slideshow %}
+                {% slideshow %}
+
               {% endblock %}
             </div>
           </TD>
