@@ -1,0 +1,29 @@
+<div id="menulet">
+	<h3>Последние посты</h3>
+	<hr />
+	{% for entry in entry_list %}
+	<div class="blogflash">	
+		<table>
+		<tr valign="top">
+			<td>
+				<div id="postimage">
+					<a href="{{entry.get_absolute_url}}">
+						<img src="/site_media/{{entry.thumb_img_url}}" alt="{{entry.title}}" border="0" />
+					</a>
+				</div>
+			</td>
+			<td style="width: 100%">
+				<div align="right" style="font-size: 11px;">{{entry.pub_date|date:"d-m-Y" }}</div>
+				&nbsp;&nbsp;
+				<a href="{{entry.get_absolute_url}}">
+					<b>{{entry.title}}</b>
+				</a>
+				<br />
+				
+			</td>
+		</tr>
+		</table>
+	</div>
+	{% endfor %}
+	<div align="right"><a href="/blog">Все посты >></a></div>
+</div>

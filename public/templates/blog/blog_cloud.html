@@ -1,0 +1,13 @@
+{% load blogtags %}
+
+<div id="menulet">
+	<h3>Облако тегов</h3>
+             
+	{% for tag in tags %}
+	<a href="/blog/bytag/{{tag.name}}" style="font-size: {{tag.font_size|true_font_size}}px">
+		<b>{{tag.name}}</b>
+	</a>
+	&nbsp;
+	{% endfor %}
+</div>
+<br />

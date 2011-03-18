@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+
+{% load blogtags %}
+
+{% block extramenu %}
+	{% blogcloud %}
+	
+	{% block blogmenu %}
+	{% endblock %}
+{% endblock %}

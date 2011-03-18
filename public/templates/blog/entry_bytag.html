@@ -1,0 +1,9 @@
+{% extends 'blogbase.html' %}
+
+{% block content %}
+	<div id="id_pagetitle">
+    	<strong>Статьи с тегом "{{tag}}" </strong>
+	</div>
+	<br />
+	{% include 'entry_list.html' %}
+{% endblock %}

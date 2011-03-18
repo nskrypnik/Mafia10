@@ -1,0 +1,22 @@
+{% extends 'blogbase.html' %}
+
+{% block blogmenu %}
+{% if user.is_authenticated %}
+<div id="menulet">
+	<h3>Меню блога</h3>
+	<a href="/admin/blog/entry/add/">Создать пост</a>
+	<br />
+	<a href="/admin/blog/category/add/">Создать категорию</a>
+</div>
+{% endif %}
+{% endblock %}
+
+{% block page_title %}
+Новости и прочее...
+{% endblock %}
+
+{% block content %}
+
+	<br />
+	{% include 'entry_list.html' %}
+{% endblock %}
