@@ -1,26 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    {% block title %}
+    <title>{{title}}</title>
+    {% endblock %}
 {% include 'header.html' %}
-  {% block content %}
+  
   <div id="content_wrapper">  
       <TABLE id="table" align="center">
         <TR valign="top">
           
-          <TD class="left"> 
+          <TD class="left">
+            <div id="left-menu">
+              <ul class="" id="">
+                <li class="" id=""><a href="/blog/" onclick="">Блог</a></li>
+                <li class="" id=""><a href="javascript: void(0)" onclick="">Новичкам</a></li>
+                <li class="" id=""><a href="javascript: void(0)" onclick="">Игры</a></li>
+                <li class="" id=""><a href="javascript: void(0)" onclick="">Турниры</a></li>
+                <li class="" id=""><a href="javascript: void(0)" onclick="">Участники</a></li>
+                <li class="" id=""><a href="javascript: void(0)" onclick="">Контакты</a></li>
+                
+              </ul>
+            </div>
+            <div id="extramenu">
+            {% block extramenu %}
+            {% endblock %}
+            </div> 
           </TD>
           <TD id="cell">
             <div id="content">
+              
               <div id="content_head">
                 <div id="page_title"> 
-                  <h1>Маф-клуб "10-негритят"</h1>
+                  <h1>{% block page_title %}Маф-клуб "10-негритят"{% endblock %}</h1>
                 </div> 
                 <div id="nigers">
                   <IMG id="screen2" style="display: none" src="{{MEDIA_URL}}/images/microamericans.png">
                   <IMG  id="screen1"  src="{{MEDIA_URL}}/images/microamericans2.png">
                 </div>
+              
                 <div style="clear: both"></div>
-              </div>
-              <div align="center" id="slide-container"> 
-                <IMG class="content_img" src="{{MEDIA_URL}}/images/photo.png" width="605" height="429">
-              </div>
+                </div>
+              {% block content %}
+                <div align="center" id="slide-container"> 
+                  <IMG class="content_img" src="{{MEDIA_URL}}/images/photo.png" width="605" height="429">
+                </div>
+              {% endblock %}
             </div>
           </TD>
           <TD class="right">
@@ -29,5 +55,5 @@
         </TR>
       </TABLE>
   </div> 
-  {% endblock %}
+  
 {% include 'footer.html' %}
