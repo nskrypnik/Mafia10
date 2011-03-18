@@ -1,29 +1,24 @@
 	{% for entry in entry_list.object_list %}
-		<table>
-			<tr valign="top">
-				<td>
+	     {% comment %}
 					<div id="postimage">
 						<a href="{{ entry.get_absolute_url }}">
 							<img src="/site_media/{{entry.small_img_url}}" alt="{{entry.title}}" border="0" />
 						</a>
 					</div>
-				</td>
-				<td style="padding-left: 20px; width: 100%;">
+				{% endcomment %}
 				<div id="blog_content">
 					<a href="{{ entry.get_absolute_url }}">
 						<h2>{{ entry.title }}</h2>
 					</a>
-					<div align="right" class="publish_date">Published on {{ entry.pub_date|date:"F j, Y" }}</div>
+					<div align="right" class="publish_date">Опубликовано {{ entry.pub_date|date:"d.m.Y" }}</div>
 					{% if entry.excerpt_html %}
 						{{ entry.excerpt_html|safe }}
 					{% else %}
 						{{ entry.body_html|truncatewords_html:"50"|safe }}
 					{% endif %}
 				</div>
-				</td>	
-			</tr>
-		</table>
-		<hr />
+				
+				<div class="divider"></div>
 	{% endfor %}
 	
 <div class="pagination" align="right">

@@ -55,10 +55,11 @@ class EntryAdmin(admin.ModelAdmin):
 	def save_model(self, request, obj, form, change):
 		# Сделать облако тегов
 		obj.save()
-		# Работаем с картинками
+		# While ignore this code
+		return
 		try:
 			img = Image.open(obj.postimage.path)
-		except IOError:
+		except IOError, ValueError:
 			return
 		img.thumbnail((200, 200), Image.ANTIALIAS)
 		img.save(obj.postimage.path)

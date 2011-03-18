@@ -11,22 +11,27 @@
 {% endif %}
 {% endblock %}
 
-{% block content %}
-	<div id="blogtitle">
-		<h1>{{entry.title}}</h1>
-	</div>
+
+{% block page_title %}
+{{entry.title}}
+{% endblock %}
+
+
+{% block content %}	
 			
 	<div>
 
 		<table>
 			<tr valign="top">
 				<td style="padding-top: 10px;">
+				{% comment %}
 					<div id="postimage">
 						<img src="/site_media/{{entry.postimage}}" alt="{{entry.title}}" />
 					</div>
+				{% endcomment %}
 				</td>
 				<td style="padding-left: 20px; width: 100%;">
-					<div align="right" class="publish_date">Published on {{ entry.pub_date|date:"F j, Y" }}</div>
+					<div align="right" class="publish_date">Опубликовано {{ entry.pub_date|date:"d.m.Y" }}</div>
 					<div id="blog_content">
 						<b>{{ entry.excerpt_html|safe }}</b>
 					</div>
@@ -36,7 +41,7 @@
 	
 	{{ entry.body_html|safe }}
 	</div>
-	<hr />
+	<div class="divider"></div>
 	<p><b>Категории:</b>
 	{% for category in entry.categories.all %}
 		{{ category.title }}
