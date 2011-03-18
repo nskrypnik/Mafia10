@@ -30,9 +30,10 @@
 					</div>
 				{% endcomment %}
 				</td>
-				{% comment %}
+				
 				<td style="padding-left: 20px; width: 100%;">
 					<div align="right" class="publish_date">Опубликовано {{ entry.pub_date|date:"d.m.Y" }}</div>
+				{% comment %}
 					<div id="blog_content">
 						<b>{{ entry.excerpt_html|safe }}</b>
 					</div>
