@@ -12,6 +12,25 @@
         <TR valign="top">
           
           <TD class="left">
+            {% if vk_user %}
+              <div id="user-info">
+                <div align="center" style="padding-bottom: 5px;">
+                  <img id="avatar" src="{{vk_user.photo_medium}}" title="{{vk_user.first_name}} {{vk_user.last_name}}" />
+                </div>
+                <span>{{ vk_user.first_name }}</span>
+                <a href="/logout/?next={{request.path}}">(Выйти)</a>
+                <div class="divider"></div>
+              </div>
+                            
+            {% else %}
+            <div id="authorization" >
+              <a href="javascript: void(0)" onclick="VK.Auth.login(authInfo);">
+              <img border="0" src="{{MEDIA_URL}}/images/vkontakte-logo.jpg" />
+               <span style="vertical-align: top;"> ход </span>
+              </a>
+              <div class="divider"></div>
+            </div>
+            {% endif %}
             <div id="left-menu">
               <ul class="" id="">
                 <li class="" id=""><a href="/blog/" onclick="">Блог</a></li>

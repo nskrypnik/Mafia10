@@ -8,7 +8,17 @@
       $(function(){
         setTimeout(function() { $('#screen1').hide(); $('#screen2').show();  }, 1000);
       });
-    </script>  
+    </script>
+    <script type="text/javascript" >
+      function authInfo(response) {
+        if (response.session) {
+          next = window.location;
+          window.location = '/login/?mid=' + response.session.mid + '&next=' + next;
+        } else {
+          alert('not auth');
+        }
+      }
+  </script>
   </head>
   
   <body>
