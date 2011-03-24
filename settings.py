@@ -74,6 +74,7 @@ INSTALLED_APPS = (
     'tagging',
     'markdown',
     'slideshow',
+    'mafia',
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
