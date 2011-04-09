@@ -1,0 +1,81 @@
+{% extends 'index.html' %}
+
+{% block page_title %}
+    Стать участником
+{% endblock %}
+
+{% block content %}
+<div style="padding-bottom: 20px;">
+    Мы всегда открыты для новых участников, и мы хотим, чтоб наш клуб постоянно пополнялся новыми, интересными
+людьми!
+</div>
+    {% if vkuser %}
+        {% if is_member %}
+            {% if is_active %}
+            <span style="font-size: 27px;">
+                {{vk_user.first_name}}, Вы уже участник нашего клуба :-)
+            </span>
+            {% else %}
+            <span style="font-size: 27px;">{{vk_user.first_name}}, Вы уже подали заявку на регистрацию. Подождите, пока с Вами свяжутся
+                организаторы клуба.</span>
+            {% endif %}
+        {% else %}
+            <span style="font-size: 23px;">
+                Здесь можно зарегистрироваться, как участник нашего клуба и как участник
+                открытого турнира 
+                <nobr>
+                <a href="/springcup2011/"><strong>&#8220;Mafia Spring Cup 2011&#8221;</strong></a>
+                </nobr>
+            </span>
+            
+            <div id="reg-user-info" style="padding-top: 20px;">
+                <div style="float: left; ">
+                    <img width="75" id="avatar" src="{{vk_user.photo_medium}}" title="{{vk_user.first_name}} {{vk_user.last_name}}" />
+                </div>
+                
+                
+                
+                <div style="padding-left: 120px; font-size: 23px;" >
+            
+                    <span style="font-size: 27px;">
+                        <strong>{{vk_user.first_name}} {{vk_user.last_name}}</strong>
+                    </span>
+                <form id="register-form" action="/join/" method="post">
+                    {% csrf_token %}
+                    <div style="padding-top: 20px">
+                    Контактный телефон<br />
+                    <input type="text" style="width: 300px; font-size: 23px;" name="phone" value="{{phone}}"><br />
+                    <span style="font-size: 75%; color: red">{{phone_error}}</span>
+                    </div>
+                    
+                    <div style="padding-top: 20px">
+                    E-mail<br />
+                    <input type="text" style="width: 300px; font-size: 23px;" name="email" value="{{email}}"><br />
+                    <span style="font-size: 75%; color: red">{{email_error}}</span>
+                    </div>
+                    
+                    <div style="padding-top: 20px">
+                        <a href="javascript: void(0)" onclick="$('#register-form').submit()">
+                            <img src="{{MEDIA_URL}}/images/submit.png" title="Отправить" />
+                        </a>
+                    </div>
+            </form>
+            </div>
+           <div style="clear:both"></div>
+           </div>
+        {% endif %}
+    {% else %}
+        <h2>Чтоб стать участником, необходимо авторизироваться</h2>
+        <div style="padding-top: 20px;">
+            <div id="authorization" >
+                <a href="javascript: void(0)" onclick="VK.Auth.login(authInfo);">
+                    <img border="0" src="{{MEDIA_URL}}/images/vkontakte-logo.jpg" />
+                    <span style="vertical-align: top;"> ход </span>
+                </a>
+            </div>
+            Авторизация через социальную сеть "Вконтакте". Для успешной авторизации, Вам необходим аккаунт в
+            этой социальной сети.
+
+        </div>
+    {% endif %}
+{% endblock %}

@@ -34,11 +34,11 @@
             <div id="left-menu">
               <ul class="" id="">
                 <li class="" id=""><a href="/blog/" onclick="">Блог</a></li>
-                <li class="" id=""><a href="javascript: void(0)" onclick="">Новичкам</a></li>
-                <li class="" id=""><a href="javascript: void(0)" onclick="">Игры</a></li>
-                <li class="" id=""><a href="javascript: void(0)" onclick="">Турниры</a></li>
-                <li class="" id=""><a href="javascript: void(0)" onclick="">Участники</a></li>
-                <li class="" id=""><a href="javascript: void(0)" onclick="">Контакты</a></li>
+                <li class="" id=""><a href="/newbe/" onclick="">Новичкам</a></li>
+                <li class="" id=""><a href="/games/" onclick="">Игры</a></li>
+                <li class="" id=""><a href="/springcup2011/" onclick="">Турниры</a></li>
+                <li class="" id=""><a href="/mafiosi/" onclick="">Участники</a></li>
+                <li class="" id=""><a href="/contacts/" onclick="">Контакты</a></li>
                 
               </ul>
             </div>
@@ -53,7 +53,7 @@
               <div id="content_head">
               {% block content-head %}
                 <div id="page_title"> 
-                  <h1>{% block page_title %}Маф-клуб "10 негритят"{% endblock %}</h1>
+                <h1>{% block page_title %}Маф-клуб &#8220;10 негритят&#8221; {% endblock %}</h1>
                 </div> 
                 <div id="nigers">
                   <IMG id="screen2" style="display: none" src="{{MEDIA_URL}}/images/microamericans.png">
@@ -62,16 +62,47 @@
               
                 <div style="clear: both"></div>
                 </div>
+              
               {% endblock %}  
               {% block content %}
-                {% load slideshow %}
-                {% slideshow %}
+                
+                {% comment  %}
+                    {% load slideshow %}
+                    {% slideshow %}
+                {% endcomment %}
+                <div id="slide-container" style="float:left; margin-right: 10px;">
+                    <a href="/springcup2011/">
+                        <img src="http://cs11171.vkontakte.ru/g16291793/a_d2b2a9e6.jpg" title="Mafia Spring Cup 2010" />
+                    </a>
+                </div>
+                
+                <h2>&#8220;Mafia Spring Cup 2011&#8221;</h2>
+                
+                Наш клуб с радостью представляет Вам главное мафиозное событие этой весны - 
+                <nobr><strong>&#8220;Mafia Spring Cup 2011&#8221;</strong></nobr> <br /><br />
+                &#8220;Mafia Spring Cup 2011&#8221; - открытый кубок по мафии в Днепропетровске, в котором может
+                учавствовать любой желающий. Для участия в турнире достаточно
+                зарегистрироваться
+                Подробнее о турнире и правилах читайте <a href="/springcup2011/">здесь</a>.
+                <br /><br />
+                <a id="take-part" href="/joinus/">Принять участие</a>
 
               {% endblock %}
             </div>
           </TD>
           <TD class="right">
             <div>Партнеры</div>
+            <div style="padding-top: 20px; padding-left: 0px;">
+                <noindex>
+                    <a TARGET='_blank' rel="nofollow" href="http://friendstime.com.ua/">
+                        <img src="{{MEDIA_URL}}/images/logo_ft.png" />
+                    </a>
+                    
+                    <a TARGET='_blank' style="font-size: 16px;" rel="nofollow" href="http://friendstime.com.ua/">
+                    FRIENDS' TIME
+                    </a>
+                </noindex>
+            </div>
           </TD>
         </TR>
       </TABLE>

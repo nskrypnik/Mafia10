@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+{% block page_title %}
+Наши мафиози :)
+{% endblock %}
+
+{% block content %}
+    {% for m in members %}
+        <div class="mafiosi_item" style="padding-bottom: 5px;">
+            <a target="_blank" href="http://vkontakte.ru/id{{m.vkontakte_id}}">
+                <img class="mafia" src="{{m.photo}}" style="float: left; margin-right: 20px;" />
+            </a>
+            
+                <span style="vertical-align: top; font-size: 23px">
+                    <a target="_blank" href="http://vkontakte.ru/id{{m.vkontakte_id}}">{{m.name}}</a>
+                </span><br>
+                <span style="font-size: 15px;">
+                    {{m.status}}
+                </span>
+            <div style="clear:both"></div>
+        </div>
+        <div class="divider"></div>
+    {% endfor %}
+{% endblock %}

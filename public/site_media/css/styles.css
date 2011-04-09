@@ -135,6 +135,14 @@ margin-right: auto;
   padding: 0 20px;
 }
 
+#content a{
+    color: #392C1A;
+    text-decoration: none;
+}
+
+#content a:hover{
+    text-decoration: underline;
+}
 
 #cell{
 width:100%; 
@@ -221,4 +229,13 @@ padding-right: 5px;
   color: #392C1A;
 }
 
- 
+#take-part{
+    color: #392C1A;
+    font-size: 200%;
+}
+
+img.mafia{
+    background-color: #EEECA9;
+    border: 2px solid #7B4C2C;
+    padding: 4px;
+}
