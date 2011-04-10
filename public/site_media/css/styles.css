@@ -120,9 +120,13 @@ min-width:150px;
 
 }
 
-.right div{
+#rightside div{
 margin-left:20px;
 font-size:23px;
+}
+
+#rightside a:hover{
+    text-decoration: none;
 }
 
 #content_wrapper, #head-wrapper, #foot-wrapper{
